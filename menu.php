@@ -30,7 +30,7 @@
   </head>
   <body>
     
-    <header class="site-header js-site-header">
+    <header class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="index.php">Psymed</a></div>

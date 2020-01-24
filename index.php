@@ -1,9 +1,9 @@
-<?php
+<?php 
 session_start();
 include('conexao.php');
 
 ?>
-<?php
+<?php 
 include 'menu.php'
 ?>
 
@@ -28,62 +28,66 @@ include 'menu.php'
 
     <section class="section bg-light pb-0"  >
       <div class="container">
+
+      
+
        
         <div class="row check-availabilty" id="next">
           <div class="block-32" data-aos="fade-up" data-aos-offset="-200">
 
-            <form action="#">
+            <form action="reserva.php" method="POST" class="bookig-form">
               <div class="row">
                 <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-                  <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
+                  <label for="data" class="font-weight-bold text-black">Data</label>
                   <div class="field-icon-wrap">
                     <div class="icon"><span class="icon-calendar"></span></div>
-                    <input type="text" id="checkin_date" class="form-control">
+                    <input type="text" name='data' id="checkin_date" class="form-control">
                   </div>
                 </div>
                 <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
-                  <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
-                  <div class="field-icon-wrap">
-                    <div class="icon"><span class="icon-calendar"></span></div>
-                    <input type="text" id="checkout_date" class="form-control">
-                  </div>
+                
+                  <label for="hora" class="font-weight-bold text-black">Hora</label>
+                  <select name="hora" id="hora" class="form-control">  
+                                    
+                          <option value="">8:00</option>
+                          <option value="">9:00</option>
+                          <option value="">10:00</option>
+                          <option value="">11:00</option>
+                          <option value="">12:00</option>
+                          <option value="">13:00</option>
+                          <option value="">14:00</option>
+                          <option value="">15:00</option>
+                          <option value="">16:00</option>
+                          <option value="">17:00</option>
+                          <option value="">18:00</option>
+                        </select>
                 </div>
                 <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
                   <div class="row">
-                    <div class="col-md-6 mb-3 mb-md-0">
-                      <label for="adults" class="font-weight-bold text-black">Adultos</label>
+                    <div class="col-md-9 mb-6 mb-md-0">
+                      <label for="local" class="font-weight-bold text-black">Local</label>
                       <div class="field-icon-wrap">
                         <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                        <select name="" id="adults" class="form-control">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4+</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-3 mb-md-0">
-                      <label for="children" class="font-weight-bold text-black">Crianças</label>
-                      <div class="field-icon-wrap">
-                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                        <select name="" id="children" class="form-control">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4+</option>
+                        <select name="" id="local" class="form-control">
+                          <option value="botafogo">Botafogo</option>
+                          <option value="tijuca">Tijuca</option>
+                          <option value="copacabana">Copacabana</option>
+                          <option value="centro">Centro</option>
+                          <option value="barra">Barra</option>
                         </select>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-3 align-self-end">
-                  <button class="btn btn-primary btn-block text-white">Check Availabilty</button>
+                  <button class="btn btn-primary btn-block text-white">Verificar disponibilidade</button>
                 </div>
               </div>
             </form>
           </div>
 
 
+  
         </div>
       </div>
     </section>
@@ -512,7 +516,7 @@ include 'menu.php'
         <div class="row pt-5">
           <p class="col-md-6 text-left">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Direitos autorais &copy;<script>document.write(new Date().getFullYear());</script> Todos od direitos reservados | Esse template é feito com <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            Direitos autorais &copy;<script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Esse template é feito com <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </p>
             
@@ -543,6 +547,6 @@ include 'menu.php'
 
     
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=0.1"></script>
   </body>
 </html>
